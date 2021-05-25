@@ -19,13 +19,8 @@ class SubjectAdapter(private val listSubject: List<String>) :
         this.onItemClickListener = onItemClickListener
     }
 
-    inner class ViewHolder(binding: ItemSubjectBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
-        private var mBinding: ItemSubjectBinding
-
-        init {
-            this.mBinding = binding
-        }
-
+    inner class ViewHolder(private val binding: ItemSubjectBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+   
         fun bindData(subject: String) {
             mBinding.textViewSubject.text = subject
             mBinding.root.rootView.setOnClickListener(this)

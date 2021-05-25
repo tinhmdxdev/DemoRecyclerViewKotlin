@@ -22,8 +22,8 @@ class SubjectAdapter(private val listSubject: List<String>) :
     inner class ViewHolder(private val binding: ItemSubjectBinding) : RecyclerView.ViewHolder(binding.root), View.OnClickListener {
    
         fun bindData(subject: String) {
-            mBinding.textViewSubject.text = subject
-            mBinding.root.rootView.setOnClickListener(this)
+            binding.textViewSubject.text = subject
+            binding.root.rootView.setOnClickListener(this)
         }
 
         override fun onClick(v: View?) {
